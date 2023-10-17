@@ -25,7 +25,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1: First, we begin by 
+- Step 1: First, we begin in Azure by creating a Resource Group. I will call this Resource Group: 'netdemo', however name it as you feel fit. After this resource group has been created and is deployed in Azure, we will move to creating our virtual machines. So, in Azure find the Virtual Machines tab. Within this tab you can see the current virtual machine/machines you have created. We will click the 'Create' button, then select the 'Azure Virtual Machine' option from the drop-down list. 
 - Step 2
 - Step 3
 - Step 4
