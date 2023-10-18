@@ -1,34 +1,48 @@
 <p align="center">
-<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
+  <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination">
 </p>
 
-<h1>Inspecting Traffic Between Azure Virtual Machines and Network Security Groups (NSGs)  </h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
+# Inspecting Traffic Between Azure Virtual Machines and Network Security Groups (NSGs)
 
+In this comprehensive tutorial, we'll guide you through the process of creating and using Azure Virtual Machines (VMs), monitoring network traffic using Wireshark, and configuring Network Security Groups (NSGs). By the end of this tutorial, you'll have a clear understanding of how to work with Azure VMs and enhance network security. Let's get started!
 
-<h2>Video Demonstration</h2>
+## Video Demonstration
 
-- ### [YouTube: A Basic Tutorial of Network Traffic with Azure](https://youtu.be/UHdRTmpI2mI)
+- [Watch on YouTube: A Basic Tutorial; Azure VMs, Network Traffic & NSGs!](https://youtu.be/UHdRTmpI2mI)
 
-<h2>Environments and Technologies Used</h2>
+## Environments and Technologies Used
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Various Command-Line Tools
-- Various Network Protocols (SSH, RDP, DNS, HTTP/S, ICMP)
-- Wireshark (Protocol Analyzer)
+- **Microsoft Azure (Virtual Machines/Compute)**
+- **Remote Desktop**
+- **Various Command-Line Tools**
+- **Various Network Protocols (SSH, RDP, DNS, HTTP/S, ICMP)**
+- **Wireshark (Protocol Analyzer)**
 
-<h2>Operating Systems Used </h2>
+## Operating Systems Used
 
-- Windows 10 (21H2)
-- Ubuntu Server 20.04
+- **Windows 10 (21H2)**
+- **Ubuntu Server 20.04**
 
-<h2>High-Level Steps</h2>
+## High-Level Steps
 
-- Step 1: First, we begin in Azure by creating a Resource Group. I will call this Resource Group: 'netdemo', however name it as you feel fit. After this resource group has been created and is deployed in Azure, we will move to creating our virtual machines. So, in Azure find the Virtual Machines tab. Within this tab you can see the current virtual machine/machines you have created. We will click the 'Create' button, then select the 'Azure Virtual Machine' option from the drop-down list. 
-- Step 2
-- Step 3
-- Step 4
+### Step 1: Create the First Virtual Machine (VM)
+
+Begin by creating the first VM in Azure. The only two selections that should be changed are its "Image" and "Size." Use the following specifications: "Image: Windows 10 (21H2); Size (_recommended_): 2 VCPUs, 16 GiBs of memory." After these specifications are set, create the VM and wait for it to fully deploy.
+
+### Step 2: Create the Second Virtual Machine (VM)
+
+Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image: Ubuntu Server 20.04 LTS; Size (_recommended_): 2 VCPUs and 16 GiBs of memory." In the "Networking" section, choose the same "Virtual Network" that your first VM is using. The shared "Virtual Network" ensures that your VMs can communicate and share data while simplifying security and network management. After theses specifications have been made, create your second VM and let it deploy.
+
+### Step 3: Connecting to VM & Setting-Up Packet Anazlyzer
+
+We will be using the Remote Desktop Protocol (RDP) to connect directly to our Windows 10 VM. Start an instance of RDP and input your first VM's **Public** IP Address and credentials when prompted.
+
+After successfully connecting, pat yourself on the back and open Microsoft Edge. In the address bar, search for "Wireshark Download." You should find [this page](https://www.wireshark.org/download.html).
+
+Download the "Wireshark x64 Installer," run the executable (.exe) file, and follow the prompts to install Wireshark. Open the application and be ready for the next step.
+
+### Step 4: Observing Network Traffic
+
 
 <h2>Actions and Observations</h2>
 
