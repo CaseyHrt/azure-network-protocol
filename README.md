@@ -27,20 +27,28 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 
 ### Step 1: Create the First Virtual Machine (VM)
 
-Begin by creating the first VM in Azure. The only two selections that should be changed are its "Image" and "Size." Use the following specifications: "Image: Windows 10 (21H2); Size (_recommended_): 2 VCPUs, 16 GiBs of memory." After these specifications are set, create the VM and wait for it to fully deploy.
+Begin by creating the first VM in Azure. The only two selections that should be changed are its "Image" and "Size." Use the following specifications: "Image: __Windows 10 (21H2)__; Size (_recommended_): __2 VCPUs, 16 GiBs of memory__." After these specifications are set, create the VM and wait for it to fully deploy.
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3cb72348-b527-4a88-b87d-ef74c7418b2f)
 
 
 ### Step 2: Create the Second Virtual Machine (VM)
 
-Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image: Ubuntu Server 20.04 LTS; Size (_recommended_): 2 VCPUs and 16 GiBs of memory." In the "Networking" section, choose the same "Virtual Network" that your first VM is using. The shared "Virtual Network" ensures that your VMs can communicate and share data while simplifying security and network management. After theses specifications have been made, create your second VM and let it deploy.
+Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image: __Ubuntu Server 20.04 LTS__; Size (_recommended_): __2 VCPUs and 16 GiBs of memory__." In the "Networking" section, choose the same "Virtual Network" that your first VM is using. The shared "Virtual Network" ensures that your VMs can communicate and share data while simplifying security and network management. Thus, It is essential the correct Virual Network is chosen. After theses specifications have been made, create your second VM and let it deploy.
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/7d2193d7-7a24-4225-b079-28250b386785)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/51fbab1d-dac9-4a8a-b784-c604f378e573)
+
+
 
 
 
 ### Step 3: Connecting to VM & Setting-Up Packet Anazlyzer
 
 We will be using the Remote Desktop Protocol (RDP) to connect directly to our Windows 10 VM. Start an instance of RDP and input your first VM's **Public** IP Address and credentials when prompted.
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/6a8fc5fc-e6b0-4b1e-a2c3-63a5f16bd5b4)
 
 After successfully connecting, pat yourself on the back and open Microsoft Edge. In the address bar, search for "Wireshark Download." You should find [this page](https://www.wireshark.org/download.html).
 
@@ -50,14 +58,14 @@ Download the "Wireshark x64 Installer," run the executable (.exe) file, and foll
 
 ### Step 4: Observing Network Traffic
 
-Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this ">ping 10.0.0.5". If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
+Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this `ping 10.0.0.5`. If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3cc4289e-8ccc-40a4-befd-853cdd2117cb)
 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/19686d97-9a7b-4e0d-9cab-54c2b6c5edf0)
 
-Further Inspection of theses packets shows our first VM (_its private IP_) requesting a reply from out second VM (_its private IP_) and then our second VM actually replying! __REMEMBER__ ICMP, unlike Transmission Control Protocol (TCP) or User Datagram Protocol (UDP), operates independently of any transport layer protocol. ICMP is a connectionless protocol, which means that devices can send messages without the necessity of establishing a prior connection with the target device. 
+Further Inspection of theses packets shows our VM's communicating. Our first VM (_IP 10.0.0.4_) initaes the communication. Communcation follows with out second VM (_IP 10.0.0.5_) replying back. __TO NOTE:__ ICMP, unlike Transmission Control Protocol (TCP) or User Datagram Protocol (UDP), operates independently of any transport layer protocol. ICMP is a connectionless protocol, which means that devices can send messages without the necessity of establishing a prior connection with the target device. Thus, it is an important 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/0b0cc70d-db68-4ef1-8b93-68f146a7ccf2)
 
