@@ -38,7 +38,8 @@ Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/7d2193d7-7a24-4225-b079-28250b386785)
 
-![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/51fbab1d-dac9-4a8a-b784-c604f378e573)
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/dfc18540-0710-4707-baf7-9034c5dcf82d)
+
 
 
 
@@ -48,7 +49,8 @@ Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image
 
 We will be using the Remote Desktop Protocol (RDP) to connect directly to our Windows 10 VM. Start an instance of RDP and input your first VM's **Public** IP Address and credentials when prompted.
 
-![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/6a8fc5fc-e6b0-4b1e-a2c3-63a5f16bd5b4)
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/02b5da1c-77bc-4211-8d22-cea2fb308d5d)
+
 
 After successfully connecting, pat yourself on the back and open Microsoft Edge. In the address bar, search for "Wireshark Download." You should find [this page](https://www.wireshark.org/download.html).
 
