@@ -43,6 +43,23 @@ Download the "Wireshark x64 Installer," run the executable (.exe) file, and foll
 
 ### Step 4: Observing Network Traffic
 
+Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this ">>ping 10.0.0.5". If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/e3869c2f-c305-49f1-8765-e811486e43a2)
+
+
+Further Inspection of theses packets shows our first VM (its private IP) requesting a reply from out second VM (its private IP) and then our second VM actually replying! 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/0b0cc70d-db68-4ef1-8b93-68f146a7ccf2)
+
+
+
+
+
+
+
+
+
 
 <h2>Actions and Observations</h2>
 
