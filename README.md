@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination">
+  <img src="https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/193b8047-5d68-41c8-bb29-5a8238481e28" alt="Traffic Examination">
+
 </p>
 
 # Inspecting Traffic Between Azure Virtual Machines and Network Security Groups (NSGs)
@@ -29,7 +30,8 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 
 Begin by creating the first VM in Azure. The only two selections that should be changed are its "Image" and "Size." Use the following specifications: "Image: __Windows 10 (21H2)__; Size (_recommended_): __2 VCPUs, 16 GiBs of memory__." After these specifications are set, create the VM and wait for it to fully deploy.
 
-![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3cb72348-b527-4a88-b87d-ef74c7418b2f)
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/e0bb8d5e-abd5-4baa-b433-3cb75704c939)
+
 
 
 ### Step 2: Create the Second Virtual Machine (VM)
@@ -60,6 +62,7 @@ Download the "Wireshark x64 Installer," run the executable (.exe) file, and foll
 
 ### Step 4: Observing Network Traffic
 
+#### __ICMP__
 Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this `ping 10.0.0.5`. If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3cc4289e-8ccc-40a4-befd-853cdd2117cb)
@@ -67,9 +70,13 @@ Begin by having both Wirsehsark and Powershell open. In Wireshark, you should al
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/19686d97-9a7b-4e0d-9cab-54c2b6c5edf0)
 
-Further Inspection of theses packets shows our VM's communicating. Our first VM (_IP 10.0.0.4_) initaes the communication. Communcation follows with out second VM (_IP 10.0.0.5_) replying back. __TO NOTE:__ ICMP, unlike Transmission Control Protocol (TCP) or User Datagram Protocol (UDP), operates independently of any transport layer protocol. ICMP is a connectionless protocol, which means that devices can send messages without the necessity of establishing a prior connection with the target device. Thus, it is an important 
+Further Inspection of theses packets shows our VM's communicating. Our first VM (_IP 10.0.0.4_) initaes the communication. Communcation follows with out second VM (_IP 10.0.0.5_) replying back. __TO NOTE:__ ICMP, unlike Transmission Control Protocol (TCP) or User Datagram Protocol (UDP), operates independently of any transport layer protocol. ICMP is a connectionless protocol, which means that devices can send messages without the necessity of establishing a prior connection with the target device. Thus, it is an important tool in troubleshooting 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/0b0cc70d-db68-4ef1-8b93-68f146a7ccf2)
+
+#### __SSH__ 
+
+What we will observe next is Secure Shell (SSH) 
 
 
 
