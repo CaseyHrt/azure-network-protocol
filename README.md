@@ -76,7 +76,7 @@ Further Inspection of theses packets shows our VM's communicating. Our first VM 
 
 #### __SSH__ 
 
-What we will observe next is Secure Shell (SSH) 
+What we will observe next is Secure Shell (SSH) traffic. SSH is a way to connect to and control a computer or server over the internet securely. Its application 
 
 
 
