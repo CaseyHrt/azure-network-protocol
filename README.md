@@ -40,10 +40,7 @@ Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/7d2193d7-7a24-4225-b079-28250b386785)
 
-![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/dfc18540-0710-4707-baf7-9034c5dcf82d)
-
-
-
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/08014e0f-788e-4abf-8eea-3f00d7769faf)
 
 
 
@@ -68,7 +65,6 @@ Begin by having both Wirsehsark and Powershell open. In Wireshark, you should al
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3cc4289e-8ccc-40a4-befd-853cdd2117cb)
 
 
-![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/19686d97-9a7b-4e0d-9cab-54c2b6c5edf0)
 
 Further Inspection of theses packets shows our VM's communicating. Our first VM (_IP 10.0.0.4_) initaes the communication. Communcation follows with out second VM (_IP 10.0.0.5_) replying back. __TO NOTE:__ ICMP, unlike Transmission Control Protocol (TCP) or User Datagram Protocol (UDP), operates independently of any transport layer protocol. ICMP is a connectionless protocol, which means that devices can send messages without the necessity of establishing a prior connection with the target device. Thus, it is an important tool in troubleshooting 
 
@@ -76,7 +72,11 @@ Further Inspection of theses packets shows our VM's communicating. Our first VM 
 
 #### __SSH__ 
 
-What we will observe next is Secure Shell (SSH) traffic. SSH is a way to connect to and control a computer or server over the internet securely. Its application 
+What we will observe next is Secure Shell (SSH) traffic. SSH is a method for securely connecting to and controlling remote computers or servers over the internet. It's a critical tool widely used by system administrators, network engineers, and developers for tasks like configuring, troubleshooting, and maintaining systems, especially when dealing with remote machines. So, in Wireshark fitler by SSH (tcp.port == 22) traffic. Then in Powershell type the command: "ssh (VM2's User)@(VM2's Private IP). To exemplify, say your VM2 User is "admin1" and its private IP is "10.0.0.5", SSH would be initiated using `ssh admin1@10.0.0.5`. You will then be prompted to enter the password for your second VM. Once entered correctly you should be welcomed by a host of text in Powershell, and you will have already noticed the SSH traffic in Wireshark.
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/02f65a83-ac55-458f-b4ce-2d7b17fb7b8c)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/17c43ac0-efcf-478c-a4b7-aab290d0ef3e)
 
 
 
