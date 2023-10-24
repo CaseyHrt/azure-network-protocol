@@ -78,9 +78,22 @@ What we will observe next is Secure Shell (SSH) traffic. SSH is a method for sec
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/17c43ac0-efcf-478c-a4b7-aab290d0ef3e)
 
+One connected via SSH make sure to try out some Linux commands. Here are a few basic ones to play around with: 
+- `hostname` _a command that prints your computer's name_. 
+- `pwd` _print the current working directory on your terminal_.
+- `uname` _print information about your machine’s kernel, name, and hardware_. 
+- `exit` _close the terminal_.
 
-
-
+   <table>
+  <tr>
+    <td><img src="![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/163a80ed-806d-4c79-975a-387f50bb6519)" alt="hostname"></td>
+    <td><img src="![image]![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/006e7386-283b-4416-9afd-d24638c1d8b1)" alt="pwd"></td>
+  </tr>
+  <tr>
+    <td><img src="![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/b68c57e2-2dd1-4fac-b778-1e692e68ac23)" alt="uname"></td>
+    <td><img src="![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/d9e54e65-ed5d-4633-aca5-baf1c80aa186)" alt="exit"></td>
+  </tr>
+</table>
 
 
 
