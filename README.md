@@ -90,7 +90,8 @@ Also, don't forget to observe the changes in traffic when using the SSH protocol
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/84f744b5-0ced-40cc-8e30-554d3be827a4)
 
-#### __Other
+#### __DHCP__ 
+
 
 
 
