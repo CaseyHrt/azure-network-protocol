@@ -84,16 +84,14 @@ One connected via SSH make sure to try out some Linux commands. Here are a few b
 - `uname` _print information about your machine’s kernel, name, and hardware_. 
 - `exit` _close the terminal_.
 
-   <table>
-  <tr>
-    <td><img src="![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/163a80ed-806d-4c79-975a-387f50bb6519)" alt="hostname"></td>
-    <td><img src="![image]![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/006e7386-283b-4416-9afd-d24638c1d8b1)" alt="pwd"></td>
-  </tr>
-  <tr>
-    <td><img src="![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/b68c57e2-2dd1-4fac-b778-1e692e68ac23)" alt="uname"></td>
-    <td><img src="![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/d9e54e65-ed5d-4633-aca5-baf1c80aa186)" alt="exit"></td>
-  </tr>
-</table>
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/6fbefb14-1f81-45d5-a013-0b2aaf0a6585)
+
+Also, don't forget to observe the changes in traffic when using the SSH protocol. It's interesting to see the 'network action' happen with each input. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/84f744b5-0ced-40cc-8e30-554d3be827a4)
+
+#### __Other
+
 
 
 
