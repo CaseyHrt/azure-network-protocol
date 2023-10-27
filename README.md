@@ -100,6 +100,10 @@ Now for DHCP (Dynamic Host Configuration Protocol) traffic. DHCP is a network pr
 
 This is because of the command we used,`ipconfig /renew`. The command: (1) Asks the network's DHCP server for a new IP address (__DHCP Request__). (2) The server provides a new IP address and network details like subnet mask and DNS settings (__DHCP Server Response__). (3) The network settings refresh, ensuring your computer has a working IP address (__Renewal__). 
 
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/a49f19ac-3b70-4244-8779-c1e9f9e39871)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/e3c1db62-bd19-4d52-9e4f-c838dcedc9c1)
+
 
 
 
