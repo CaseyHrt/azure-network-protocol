@@ -92,7 +92,7 @@ Also, don't forget to observe the changes in traffic when using the SSH protocol
 
 #### __DHCP__ 
 
-
+Now for DHCP (Dynamic Host Configuration Protocol) traffic. DHCP is a network protocol used to automatically assign and manage IP addresses and other network configuration parameters to devices in a TCP/IP network. Simply, DHCP automatically assigns IP addresses and network settings to devices, making it easier for them to connect to a network without manual configuration--the process of getting devices online and prevents IP address conflicts in a network
 
 
 
