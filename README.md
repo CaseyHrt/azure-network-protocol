@@ -106,8 +106,7 @@ This is because of the command we used,`ipconfig /renew`. The command: (1) Asks 
 
 #### __DNS__ 
 
-DNS (Domain Name System) is like the internet's Yellow Pages (_though still in use_). It's a system that translates human-friendly domain names (like www.google.com) into IP addresses that computers use to locate and connect to websites or other online services. It is the next network protcol we will observe next. So, filter by 
-
+DNS (Domain Name System) is like the internet's Yellow Pages (_though still in use_). It's a system that translates human-friendly domain names (like www.google.com) into IP addresses that computers use to locate and connect to websites or other online services. It is the next network protcol we will observe next. So, filter by
 
 
 
