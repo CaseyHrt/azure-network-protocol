@@ -60,7 +60,7 @@ Download the "Wireshark x64 Installer," run the executable (.exe) file, and foll
 ### Step 4: Observing Network Traffic
 
 #### __ICMP__
-Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this `ping 10.0.0.5`. If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
+Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this __`ping 10.0.0.5`__. If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3cc4289e-8ccc-40a4-befd-853cdd2117cb)
 
@@ -72,17 +72,17 @@ Further Inspection of theses packets shows our VM's communicating. Our first VM 
 
 #### __SSH__ 
 
-What we will observe next is Secure Shell (SSH) traffic. SSH is a method for securely connecting to and controlling remote computers or servers over the internet. It's a critical tool widely used by system administrators, network engineers, and developers for tasks like configuring, troubleshooting, and maintaining systems, especially when dealing with remote machines. So, in Wireshark fitler by SSH (tcp.port == 22) traffic. Then in Powershell type the command: "ssh (VM2's User)@(VM2's Private IP). To exemplify, say your VM2 User is "admin1" and its private IP is "10.0.0.5", SSH would be initiated using `ssh admin1@10.0.0.5`. You will then be prompted to enter the password for your second VM. Once entered correctly you should be welcomed by a host of text in Powershell, and you will have already noticed the SSH traffic in Wireshark.
+What we will observe next is Secure Shell (SSH) traffic. SSH is a method for securely connecting to and controlling remote computers or servers over the internet. It's a critical tool widely used by system administrators, network engineers, and developers for tasks like configuring, troubleshooting, and maintaining systems, especially when dealing with remote machines. So, in Wireshark fitler by SSH (tcp.port == 22) traffic. Then in Powershell type the command: __`ssh (VM2's User)@(VM2's Private IP)`__. To exemplify, say your VM2 User is "admin1" and its private IP is "10.0.0.5", SSH would be initiated using __`ssh admin1@10.0.0.5`__. You will then be prompted to enter the password for your second VM. Once entered correctly you should be welcomed by a host of text in Powershell, and you will have already noticed the SSH traffic in Wireshark.
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/02f65a83-ac55-458f-b4ce-2d7b17fb7b8c)
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/17c43ac0-efcf-478c-a4b7-aab290d0ef3e)
 
 One connected via SSH make sure to try out some Linux commands. Here are a few basic ones to play around with: 
-- `hostname` _a command that prints your computer's name_. 
-- `pwd` _print the current working directory on your terminal_.
-- `uname` _print information about your machine’s kernel, name, and hardware_. 
-- `exit` _close the terminal_.
+- __`hostname`__ _a command that prints your computer's name_. 
+- __`pwd`__ _print the current working directory on your terminal_.
+- __`uname`__ _print information about your machine’s kernel, name, and hardware_. 
+- __`exit`__ _close the terminal_.
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/6fbefb14-1f81-45d5-a013-0b2aaf0a6585)
 
@@ -92,13 +92,13 @@ Also, don't forget to observe the changes in traffic when using the SSH protocol
 
 #### __DHCP__ 
 
-Now for DHCP (Dynamic Host Configuration Protocol) traffic. DHCP is a network protocol used to automatically assign and manage IP addresses and other network configuration parameters to devices in a TCP/IP network. Simply, DHCP automatically assigns IP addresses and network settings to devices, making it easier for them to connect to a network without manual configuration. In WireShark filter by DHCP. You will see that there is not much DHCP traffic happening naturally. However, if we are to input `ipconfig /renew` into Powershell and hit "enter". Some traffic will appear. 
+Now for DHCP (Dynamic Host Configuration Protocol) traffic. DHCP is a network protocol used to automatically assign and manage IP addresses and other network configuration parameters to devices in a TCP/IP network. Simply, DHCP automatically assigns IP addresses and network settings to devices, making it easier for them to connect to a network without manual configuration. In WireShark filter by DHCP. You will see that there is not much DHCP traffic happening naturally. However, if we are to input __`ipconfig /renew`__ into Powershell and hit "enter". Some traffic will appear. 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/c599f9f8-f2ac-420d-aa68-66b8e88fb1f3)
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3b9c7f01-8c4b-42b4-b35f-e257014fde5b)
 
-This is because of the command we used,`ipconfig /renew`. The command: (1) Asks the network's DHCP server for a new IP address (__DHCP Request__). (2) The server provides a new IP address and network details like subnet mask and DNS settings (__DHCP Server Response__). (3) The network settings refresh, ensuring your computer has a working IP address (__Renewal__). 
+This is because of the command we used,__`ipconfig /renew`__. The command: (1) Asks the network's DHCP server for a new IP address (__DHCP Request__). (2) The server provides a new IP address and network details like subnet mask and DNS settings (__DHCP Server Response__). (3) The network settings refresh, ensuring your computer has a working IP address (__Renewal__). 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/a49f19ac-3b70-4244-8779-c1e9f9e39871)
 
@@ -106,32 +106,15 @@ This is because of the command we used,`ipconfig /renew`. The command: (1) Asks 
 
 #### __DNS__ 
 
-DNS (Domain Name System) is like the internet's Yellow Pages (_though still in use_). It's a system that translates human-friendly domain names (like www.google.com) into IP addresses that computers use to locate and connect to websites or other online services. It is the next network protcol we will observe next. So, filter by
+DNS (Domain Name System) is like the internet's Yellow Pages (_though still in use_). It's a system that translates human-friendly domain names (like www.google.com) into IP addresses that computers use to locate and connect to websites or other online services. It is the next network protcol we will observe next. So, filter by DNS on Wireshark. You may see that there is DNS traffic already happening, this goes to show how integral and integrated this protocol is to internet activies. Still though, let us observe traffic of our own making. To do so we will use __`nslookup`__, a command-line tool that helps you query DNS (Domain Name System) information. So, in Powershell input __`nslookup www.google.com`__ then hit enter. Powershell will run the command, providing the requested information of the DNS. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/84333303-9654-4822-9463-42813dd46363)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/2db1af9a-a218-4944-b8f0-2c966772475b)
 
 
 
 <h2>Actions and Observations</h2>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
 <br />
