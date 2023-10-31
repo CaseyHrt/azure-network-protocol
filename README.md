@@ -112,6 +112,9 @@ DNS (Domain Name System) is like the internet's Yellow Pages (_though still in u
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/2db1af9a-a218-4944-b8f0-2c966772475b)
 
+Now if we look at Wireshark, we should also see new DNS traffic. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/f7804e0d-98a2-4ebf-a76a-b266d6f89c77)
 
 
 <h2>Actions and Observations</h2>
