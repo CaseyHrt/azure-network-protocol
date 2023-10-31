@@ -25,16 +25,17 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 - **Ubuntu Server 20.04**
 
 ## High-Level Steps:
+Contents
+-[Virtual Machine Creation](link)
+-[Connecting to VM & Setting-Up Packet Anazlyzer](link)
+-[Observing Network Traffic](link)
+-[Network Security Groups & Implementaion](link)
 
-### Step 1: Create the First Virtual Machine (VM)
+### Step 1: Create the Virtual Machines (VM)
 
 Begin by creating the first VM in Azure. The only two selections that should be changed are its "Image" and "Size." Use the following specifications: "Image: __Windows 10 (21H2)__; Size (_recommended_): __2 VCPUs, 16 GiBs of memory__." After these specifications are set, create the VM and wait for it to fully deploy.
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/e0bb8d5e-abd5-4baa-b433-3cb75704c939)
-
-
-
-### Step 2: Create the Second Virtual Machine (VM)
 
 Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image: __Ubuntu Server 20.04 LTS__; Size (_recommended_): __2 VCPUs and 16 GiBs of memory__." In the "Networking" section, choose the same "Virtual Network" that your first VM is using. The shared "Virtual Network" ensures that your VMs can communicate and share data while simplifying security and network management. Thus, It is essential the correct Virual Network is chosen. After theses specifications have been made, create your second VM and let it deploy.
 
@@ -44,7 +45,7 @@ Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image
 
 
 
-### Step 3: Connecting to VM & Setting-Up Packet Anazlyzer
+### Step 2: Connecting to VM & Setting-Up Packet Anazlyzer
 
 We will be using the Remote Desktop Protocol (RDP) to connect directly to our Windows 10 VM. Start an instance of RDP and input your first VM's **Public** IP Address and credentials when prompted.
 
@@ -57,7 +58,7 @@ Download the "Wireshark x64 Installer," run the executable (.exe) file, and foll
 
 
 
-### Step 4: Observing Network Traffic
+### Step 3: Observing Network Traffic
 
 #### __ICMP__
 Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this __`ping 10.0.0.5`__. If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
@@ -124,7 +125,7 @@ RDP (Remote Desktop Protocol) is a technology that enables users to access and c
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/c4bfd6b2-bc85-41f6-ae90-69f3f91ab632)
 
-
+### Step 4: Network Security Groups & Implementaion
 
 
 
