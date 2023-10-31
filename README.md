@@ -26,8 +26,6 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 
 ## High-Level Steps:
 
-## Creating the Virtual Machines 
-
 ### Step 1: Create the First Virtual Machine (VM)
 
 Begin by creating the first VM in Azure. The only two selections that should be changed are its "Image" and "Size." Use the following specifications: "Image: __Windows 10 (21H2)__; Size (_recommended_): __2 VCPUs, 16 GiBs of memory__." After these specifications are set, create the VM and wait for it to fully deploy.
