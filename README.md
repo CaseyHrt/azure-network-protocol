@@ -26,10 +26,10 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 
 ## High-Level Steps:
 ### Contents
-- [Virtual Machine Creation](https://github.com/CaseyHrt/azure-network-protocol/edit/main/README.md#step-1-create-the-virtual-machines-vm)
-- [Connecting to VM & Setting-Up Packet Anazlyzer](https://github.com/CaseyHrt/azure-network-protocol/edit/main/README.md#step-2-connecting-to-vm--setting-up-packet-anazlyzer)
-- [Observing Network Traffic](https://github.com/CaseyHrt/azure-network-protocol/edit/main/README.md#step-3-observing-network-traffic)
-- [Network Security Groups & Implementaion](https://github.com/CaseyHrt/azure-network-protocol/edit/main/README.md#step-4-network-security-groups--implementaion)
+- [Virtual Machine Creation](https://github.com/CaseyHrt/azure-network-protocol#step-1-create-the-virtual-machines-vm)
+- [Connecting to VM & Setting-Up Packet Anazlyzer](https://github.com/CaseyHrt/azure-network-protocol#step-2-connecting-to-vm--setting-up-packet-anazlyzer)
+- [Observing Network Traffic](https://github.com/CaseyHrt/azure-network-protocol#step-3-observing-network-traffic)
+- [Network Security Groups & Implementaion](https://github.com/CaseyHrt/azure-network-protocol#step-4-network-security-groups--implementaion)
 
 ### Step 1: Create the Virtual Machines (VM)
 
