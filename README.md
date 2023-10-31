@@ -24,15 +24,9 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 - **Windows 10 (21H2)**
 - **Ubuntu Server 20.04**
 
-## Table of Contents
-- [Go to Creating Virtual Machines](section-1) 
-- [Section 2](#section-2)
-- [Section 3](#section-3)
-
-## High-Level Steps
+## High-Level Steps:
 
 ## Creating the Virtual Machines 
-<a name="section-1"></a> 
 
 ### Step 1: Create the First Virtual Machine (VM)
 
