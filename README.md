@@ -90,7 +90,7 @@ Also, don't forget to observe the changes in traffic when using the SSH protocol
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/84f744b5-0ced-40cc-8e30-554d3be827a4)
 
-#### __DHCP__ 
+#### __DHCP__  
 
 Now for DHCP (Dynamic Host Configuration Protocol) traffic. DHCP is a network protocol used to automatically assign and manage IP addresses and other network configuration parameters to devices in a TCP/IP network. Simply, DHCP automatically assigns IP addresses and network settings to devices, making it easier for them to connect to a network without manual configuration. In WireShark filter by DHCP. You will see that there is not much DHCP traffic happening naturally. However, if we are to input __`ipconfig /renew`__ into Powershell and hit "enter". Some traffic will appear. 
 
@@ -115,6 +115,17 @@ DNS (Domain Name System) is like the internet's Yellow Pages (_though still in u
 Now if we look at Wireshark, we should also see new DNS traffic. 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/f7804e0d-98a2-4ebf-a76a-b266d6f89c77)
+
+Its worth noting that while the __`nslookup`__ command-tool has its uses, you might find the __`Get-DnsClient`__ and __`Resolve-DnsName`__ command-tools more useful in Powershell. 
+
+#### __RDP__
+
+RDP (Remote Desktop Protocol) is a technology that enables users to access and control a remote computer or server over a network, allowing them to interact with the remote system as if they were physically present. It's a propitary protocol, developed by Microsoft, and is currently how we are accessing our VM's in this tutorial! To view RDP traffic, filter Wireshark by "RDP" or "tcp.port == 53". Once you have filtered by RDP, you should see a continious flow of traffic. This is (_again_) due to us using RDP to connect to our virtual machine. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/c4bfd6b2-bc85-41f6-ae90-69f3f91ab632)
+
+
+
 
 
 <h2>Actions and Observations</h2>
