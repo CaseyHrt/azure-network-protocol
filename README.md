@@ -127,7 +127,7 @@ RDP (Remote Desktop Protocol) is a technology that enables users to access and c
 
 ### Step 4: Network Security Groups & Implementaion
 
-Network Security Groups (NSGs) are a fundamental component of network security in Microsoft Azure. They act as a built-in, distributed firewall that allows you to control traffic to and from Azure resources such as virtual machines (VMs), virtual networks, and subnets. Azure hosts many features for these NSGs, like; monitoring and logging, stateful inspection, rule-based operation, and so on. For this tutorial we will: (1) create traffic on our network using ICMP, then (2) implement an imbound rule that 
+Network Security Groups (NSGs) are a fundamental component of network security in Microsoft Azure. They act as a built-in, distributed firewall that allows you to control traffic to and from Azure resources such as virtual machines (VMs), virtual networks, and subnets. Azure hosts many features for these NSGs, like; monitoring and logging, stateful inspection, rule-based operation, and so on. For this tutorial we will: (1) create traffic on our network using ICMP, then (2) implement an imbound rule that prohibits ICMP requests on our second VM, and (3) 
 
 
 <h2>Actions and Observations</h2>
