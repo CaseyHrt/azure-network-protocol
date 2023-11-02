@@ -129,7 +129,13 @@ RDP (Remote Desktop Protocol) is a technology that enables users to access and c
 
 Network Security Groups (NSGs) are a fundamental component of network security in Microsoft Azure. They act as a built-in, distributed firewall that allows you to control traffic to and from Azure resources such as virtual machines (VMs), virtual networks, and subnets. Azure hosts many features for these NSGs, like; monitoring and logging, stateful inspection, rule-based operation, and so on. For this tutorial we will: (1) create traffic on our network using ICMP, then (2) implement an imbound rule that prohibits ICMP requests on our second VM, and (3) observe the rule's effect on the network in real time.
 
-To begin, fliter by ICMP traffic in Wireshark and have an instance of Powershell running. Once you've filtered the traffic correctly, use the `ping` command-line again, referencing your second VM (_[Click Here for Assistance with "Ping"](https://github.com/CaseyHrt/azure-network-protocol/blob/main/README.md#icmp)_).
+To begin, fliter by ICMP traffic in Wireshark and have an instance of Powershell running. Once you've filtered the traffic correctly, use the `ping` command-line again, referencing your second VM (_[Click Here for Assistance with "Ping"](https://github.com/CaseyHrt/azure-network-protocol/blob/main/README.md#icmp)_). This is to confirm that we can (_still_) communicate between our VMs. If the `ping` is successful, you should also see ICMP traffic in Wireshark, and we can then move on to further steps. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/afdae094-9086-4174-bca6-bdc056f5c639)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3145e08a-aedf-4fbb-a36a-1d853dc0ce67)
+
+
 
 <h2>Actions and Observations</h2>
 
