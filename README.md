@@ -135,7 +135,7 @@ To begin, fliter by ICMP traffic in Wireshark and have an instance of Powershell
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3145e08a-aedf-4fbb-a36a-1d853dc0ce67)
 
-
+Now knowing that 
 
 <h2>Actions and Observations</h2>
 
