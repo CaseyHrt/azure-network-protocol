@@ -143,7 +143,12 @@ Undertanding that we can still communicate on our network, we're going to setup 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/d8799306-4b3a-417d-95ab-6934b5b14ffd)
 
-Once the perpetual ping has been setup, go into your [Azure Portal](https://portal.azure.com/?quickstart=true#home). Here you should click the "Virtual Machine" 
+Once the perpetual ping has been setup, go into your [Azure Portal](https://portal.azure.com/?quickstart=true#home). Here simply type "Network Security Groups" in the search bar, and click it in the box that appears under the "Services" tab. Once there, select your second VM. Within your VM2's "Network Security Groups", click "Inboung Security Rules under the "Settings" tab on the left. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/2937b7c3-435d-4455-be1c-ac0811fdb27d)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/c7e8e70d-6ab7-4e14-a056-6ce8df02e51f)
+
 
 
 <h2>Actions and Observations</h2>
