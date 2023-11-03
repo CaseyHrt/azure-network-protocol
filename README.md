@@ -135,7 +135,16 @@ To begin, fliter by ICMP traffic in Wireshark and have an instance of Powershell
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3145e08a-aedf-4fbb-a36a-1d853dc0ce67)
 
-Now knowing that 
+Undertanding that we can still communicate on our network, we're going to setup a perpetual `ping` from VM1 to VM2. This is what the command-line should look like in Powershell: `ping 10.0.0.5 -t` (__REMEMBER__, to input your second VM's private IP). Once inputted, you should see your VM1 sending constant 'ping requests' to VM2. This will be refelcted in both Powershell and Wireshark. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/e75bc9f4-2449-4d93-915c-b9586cd14950)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/daec121d-9ae7-478b-ba65-928eb510a74a)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/d8799306-4b3a-417d-95ab-6934b5b14ffd)
+
+Once the perpetual ping has been setup, go into your [Azure Portal](https://portal.azure.com/?quickstart=true#home). Here you should click the "Virtual Machine" 
+
 
 <h2>Actions and Observations</h2>
 
