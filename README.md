@@ -149,7 +149,7 @@ Once the perpetual ping has been setup, go into your [Azure Portal](https://port
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/c7e8e70d-6ab7-4e14-a056-6ce8df02e51f)
 
-
+Here you should find the "add" button, click it. Here we create our rule's specifications. 
 
 <h2>Actions and Observations</h2>
 
