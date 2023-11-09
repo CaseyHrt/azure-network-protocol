@@ -149,9 +149,29 @@ Once the perpetual ping has been setup, go into your [Azure Portal](https://port
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/c7e8e70d-6ab7-4e14-a056-6ce8df02e51f)
 
-Here you should find the "add" button, click it. Here we create our rule's specifications. 
+Here you should find the "add" button, click it. Here we create our rule's specifications. Starting from the top, let's look at our options: 
 
-<h2>Actions and Observations</h2>
+- `Source` - Control and specify the sources from which incoming traffic is either permitted or blocked based on the chosen filter setting.
+
+- `Source Port Ranges` - Define which ports should be permitted or denied for incoming traffic.
+
+- `Destination` - Specify the destination for outgoing network traffic as effected by this rule.
+
+- `Service` - Define the protocol and port range for a rule.
+
+- `Destination Port Ranges` - Define the protocol and port range for a rule.
+
+- __`Protocol` - Specify protocol affected by rule.__
+
+- __`Action` - Define rule action (_allow or deny_).__
+
+- __`Priority` - Define order in which rule is applied or executed (_lower number equals higher priority and vice-versa_).__
+
+- __`Name`- Give a name to your rule.__
+
+- `Description` - Provide description for rule.
+
+For our rule, we will be confiugring the options emboldened above. So, 
 
 
 <br />
