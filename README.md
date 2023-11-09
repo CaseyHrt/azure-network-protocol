@@ -171,7 +171,7 @@ Here you should find the "add" button, click it. Here we create our rule's speci
 
 - `Description` - Provide description for rule.
 
-For our rule, we will be confiugring the options emboldened above. So, 
+For our rule, we will be confiugring the options emboldened above. So, begin with the __protocol__ by selecting the "ICMP". This will specify our rule to effect the ICMP protocol. Then set our _action_ as "deny". So far, our rule is specified to deny transmission 
 
 
 <br />
