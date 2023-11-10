@@ -193,5 +193,10 @@ Give it a __name__ while following a clear and concise naming convention: Use th
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/7202a522-45dd-4f34-a809-e9b3def167f2)
 
 
-Once this has been done add the rule. Once added, return to virtual machine and watch the network traffic and pings within Wireshark and Powershell. They should soon reflect the implemented rule. 
+Add the rule. Return to virtual machine and watch the network traffic and pings within Wireshark and Powershell. They should soon reflect the implemented rule. 
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/609bf0cf-7590-4d53-8ea6-ce30a8ec1123)
+
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/4a683c42-42bc-47d5-b979-3d1f74e356ec)
+
 <br />
