@@ -190,5 +190,8 @@ Next, change the rule's __priority__ so that it is executed first (the priority 
 
 Give it a __name__ while following a clear and concise naming convention: Use the defined 'action' as our prefix, followed by a dash, and then the defined 'protocol'. For example, it should resemble this: __`Deny-ICMP`__. Subsequently, specify a 'source' and/or 'purpose' for the rule (again, use dashes for separation). My rule, as of now, appears as __`Deny-ICMP-From-Anywhere`__. Keep in mind that your rule doesn't have to look exactly like mine, but having a clear and defined convention for these rules can be quite helpful
 
+![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/7202a522-45dd-4f34-a809-e9b3def167f2)
 
+
+Once this has been done add the rule. Once added, return to virtual machine and watch the network traffic and pings within Wireshark and Powershell. They should soon reflect the implemented rule. 
 <br />
