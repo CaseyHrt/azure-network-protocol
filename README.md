@@ -199,4 +199,11 @@ Add the rule. Return to virtual machine and watch the network traffic and pings 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/4a683c42-42bc-47d5-b979-3d1f74e356ec)
 
+Reflecting on the impact of this inbound rule, it's essential to acknowledge that Firewalls, Network Security Groups, and similar safeguards play a critical role in maintaining the resilience and stability of internet and network infrastructure. It's easy to overlook that these measures are also present in our personal internet usage, working diligently to protect us and preserve the integrity of our networks. 
+
+To 
+
+
+
+
 <br />
