@@ -11,6 +11,22 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 
 - [Watch on YouTube: A Basic Tutorial; Azure VMs, Network Traffic & NSGs!](https://youtu.be/UHdRTmpI2mI)
 
+## Contents:
+
+__Utilized entities:__ 
+- [_Enviorments and Technolgies_](https://github.com/CaseyHrt/azure-network-protocol#environments-and-technologies-used)
+- [_Operating Systems_](https://github.com/CaseyHrt/azure-network-protocol#operating-systems-used)
+
+
+__High-level Steps:__
+- [_Virtual Machine Creation_](https://github.com/CaseyHrt/azure-network-protocol#step-1-create-the-virtual-machines-vm)
+- [_Connecting to VM & Setting-Up Packet Anazlyzer_](https://github.com/CaseyHrt/azure-network-protocol#step-2-connecting-to-vm--setting-up-packet-anazlyzer)
+- [_Observing Network Traffic_](https://github.com/CaseyHrt/azure-network-protocol#step-3-observing-network-traffic)
+- [_Network Security Groups & Implementaion_](https://github.com/CaseyHrt/azure-network-protocol#step-4-network-security-groups--implementaion)
+
+__Overview and Results:__
+- [PlaceHolder](placeholderlink)
+
 ## Environments and Technologies Used
 
 - **Microsoft Azure (Virtual Machines/Compute)**
@@ -25,11 +41,6 @@ In this comprehensive tutorial, we'll guide you through the process of creating 
 - **Ubuntu Server 20.04**
 
 ## High-Level Steps:
-### Contents
-- [Virtual Machine Creation](https://github.com/CaseyHrt/azure-network-protocol#step-1-create-the-virtual-machines-vm)
-- [Connecting to VM & Setting-Up Packet Anazlyzer](https://github.com/CaseyHrt/azure-network-protocol#step-2-connecting-to-vm--setting-up-packet-anazlyzer)
-- [Observing Network Traffic](https://github.com/CaseyHrt/azure-network-protocol#step-3-observing-network-traffic)
-- [Network Security Groups & Implementaion](https://github.com/CaseyHrt/azure-network-protocol#step-4-network-security-groups--implementaion)
 
 ### Step 1: Create the Virtual Machines (VM)
 
@@ -170,8 +181,14 @@ Here you should find the "add" button, click it. Here we create our rule's speci
 - __`Name`- Give a name to your rule.__
 
 - `Description` - Provide description for rule.
+   
+For our rule, we will be configuring the options emboldened above. Begin by selecting the __protocol__ as 'ICMP'. This specifies our rule to affect the ICMP protocol. 
 
-For our rule, we will be confiugring the options emboldened above. So, begin with the __protocol__ by selecting the "ICMP". This will specify our rule to effect the ICMP protocol. Then set our _action_ as "deny". So far, our rule is specified to deny transmission 
+Then, set the __action__ as 'deny'. As of now, our rule is set to deny transmission via the ICMP protocol.
+
+Next, change the rule's __priority__ so that it is executed first (the priority of my rule is set to '200').
+
+Give it a __name__ while following a clear and concise naming convention: Use the defined 'action' as our prefix, followed by a dash, and then the defined 'protocol'. For example, it should resemble this: __`Deny-ICMP`__. Subsequently, specify a 'source' and/or 'purpose' for the rule (again, use dashes for separation). My rule, as of now, appears as __`Deny-ICMP-From-Anywhere`__. Keep in mind that your rule doesn't have to look exactly like mine, but having a clear and defined convention for these rules can be quite helpful
 
 
 <br />
