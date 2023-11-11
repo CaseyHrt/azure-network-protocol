@@ -25,7 +25,8 @@ __High-level Steps:__
 - [_Network Security Groups & Implementaion_](https://github.com/CaseyHrt/azure-network-protocol#step-4-network-security-groups--implementaion)
 
 __Overview and Results:__
-- [PlaceHolder](placeholderlink)
+- [_What We Did_](https://github.com/CaseyHrt/azure-network-protocol#what-we-did)
+- [_What We Learned_](https://github.com/CaseyHrt/azure-network-protocol#what-we-learned)
 
 ## Environments and Technologies Used
 
@@ -205,11 +206,11 @@ To re-enable the transmission of ICMP on the network, edit the inbound rule to '
 
 ## Overview & Results
 
-#### _What we did:_
+#### _What We Did:_
 
 In this tutorial, we conducted a series of steps to explore Azure Virtual Machines (VMs), monitor network traffic using Wireshark, and configure Network Security Groups (NSGs). We started by creating VMs with different operating systems and connected to them. Then, we observed network traffic and delved into various network protocols, such as ICMP, SSH, DHCP, and DNS. Finally, we implemented an inbound rule in the Network Security Group to control network traffic effectively.
 
-#### _What we learned:_
+#### _What We learned:_
 
 Through these exercises, we gained valuable insights into Azure VMs, network protocols, and the role of Network Security Groups. We learned how to create and manage VMs, monitor network traffic, and configure security rules to control data transmission. This knowledge equips us to work with Azure VMs and enhance network security for various applications and scenarios.
 
