@@ -201,9 +201,16 @@ Add the rule. Return to virtual machine and watch the network traffic and pings 
 
 Reflecting on the impact of this inbound rule, it's essential to acknowledge that Firewalls, Network Security Groups, and similar safeguards play a critical role in maintaining the resilience and stability of internet and network infrastructure. It's easy to overlook that these measures are also present in our personal internet usage, working diligently to protect us and preserve the integrity of our networks. 
 
-To 
+To re-enable the transmission of ICMP on the network, edit the inbound rule to 'allow' or simply delete it.
 
+## Overview & Results
 
+#### _What we did:_
 
+In this tutorial, we conducted a series of steps to explore Azure Virtual Machines (VMs), monitor network traffic using Wireshark, and configure Network Security Groups (NSGs). We started by creating VMs with different operating systems and connected to them. Then, we observed network traffic and delved into various network protocols, such as ICMP, SSH, DHCP, and DNS. Finally, we implemented an inbound rule in the Network Security Group to control network traffic effectively.
+
+#### _What we learned:_
+
+Through these exercises, we gained valuable insights into Azure VMs, network protocols, and the role of Network Security Groups. We learned how to create and manage VMs, monitor network traffic, and configure security rules to control data transmission. This knowledge equips us to work with Azure VMs and enhance network security for various applications and scenarios.
 
 <br />
