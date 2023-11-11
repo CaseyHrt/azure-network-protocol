@@ -49,7 +49,7 @@ Begin by creating the first VM in Azure. The only two selections that should be 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/e0bb8d5e-abd5-4baa-b433-3cb75704c939)
 
-Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image: __Ubuntu Server 20.04 LTS__; Size (_recommended_): __2 VCPUs and 16 GiBs of memory__." In the "Networking" section, choose the same "Virtual Network" that your first VM is using. The shared "Virtual Network" ensures that your VMs can communicate and share data while simplifying security and network management. Thus, It is essential the correct Virual Network is chosen. After theses specifications have been made, create your second VM and let it deploy.
+Create the second VM in Azure. Specify the "Image" and "Size" as follows: "Image: __Ubuntu Server 20.04 LTS__; Size (_recommended_): __2 VCPUs and 16 GiBs of memory__." In the "Networking" section, choose the same "Virtual Network" that your first VM is using. The shared "Virtual Network" ensures that your VMs can communicate and share data while simplifying security and network management. Thus, It is essential the correct Virual Network is chosen. After theses specifications have been set, create your second VM and let it deploy.
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/7d2193d7-7a24-4225-b079-28250b386785)
 
@@ -66,18 +66,17 @@ We will be using the Remote Desktop Protocol (RDP) to connect directly to our Wi
 
 After successfully connecting, pat yourself on the back and open Microsoft Edge. In the address bar, search for "Wireshark Download." You should find [this page](https://www.wireshark.org/download.html).
 
-Download the "Wireshark x64 Installer," run the executable (.exe) file, and follow the prompts to install Wireshark. Open the application and be ready for the next step.
+Download the "Wireshark x64 Installer," run the executable (.exe) file. Follow the prompts to install Wireshark. Open the application and be ready for the next step.
 
 
 
 ### Step 3: Observing Network Traffic
 
 #### __ICMP__
+
 Begin by having both Wirsehsark and Powershell open. In Wireshark, you should already see packet transmission occuring; however, let's filter our traffic by ICMP packets. We can see that there is no _current_ ICMP traffic. So let's create some. In Powershell, input "ping" followed by your second VM's private IP. It should resemble something like this __`ping 10.0.0.5`__. If the command has been executed correctly, you will see it pinging the other VM's IP. If you look at Wireshark you should also see ICMP packets. 
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/3cc4289e-8ccc-40a4-befd-853cdd2117cb)
-
-
 
 Further Inspection of theses packets shows our VM's communicating. Our first VM (_IP 10.0.0.4_) initaes the communication. Communcation follows with out second VM (_IP 10.0.0.5_) replying back. __TO NOTE:__ ICMP, unlike Transmission Control Protocol (TCP) or User Datagram Protocol (UDP), operates independently of any transport layer protocol. ICMP is a connectionless protocol, which means that devices can send messages without the necessity of establishing a prior connection with the target device. Thus, it is an important tool in troubleshooting 
 
@@ -91,7 +90,7 @@ What we will observe next is Secure Shell (SSH) traffic. SSH is a method for sec
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/17c43ac0-efcf-478c-a4b7-aab290d0ef3e)
 
-One connected via SSH make sure to try out some Linux commands. Here are a few basic ones to play around with: 
+Once connected via SSH make sure to try out some Linux commands. Here are a few basic ones to play around with: 
 - __`hostname`__ _a command that prints your computer's name_. 
 - __`pwd`__ _print the current working directory on your terminal_.
 - __`uname`__ _print information about your machine’s kernel, name, and hardware_. 
@@ -137,7 +136,7 @@ RDP (Remote Desktop Protocol) is a technology that enables users to access and c
 
 ![image](https://github.com/CaseyHrt/azure-network-protocol/assets/146404028/c4bfd6b2-bc85-41f6-ae90-69f3f91ab632)
 
-### Step 4: Network Security Groups & Implementaion
+### Step 4: Network Security Groups & Implementation
 
 Network Security Groups (NSGs) are a fundamental component of network security in Microsoft Azure. They act as a built-in, distributed firewall that allows you to control traffic to and from Azure resources such as virtual machines (VMs), virtual networks, and subnets. Azure hosts many features for these NSGs, like; monitoring and logging, stateful inspection, rule-based operation, and so on. For this tutorial we will: (1) create traffic on our network using ICMP, then (2) implement an imbound rule that prohibits ICMP requests on our second VM, and (3) observe the rule's effect on the network in real time.
 
